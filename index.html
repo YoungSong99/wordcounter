@@ -16,12 +16,14 @@
 </head>
 <body class="container">
 <h1>Word Counter</h1>
-<textarea class="form-control" rows="3" id="jasoseol">Enter the word that you want to count</textarea>
+<textarea onkeydown="counter()" class="form-control" rows="3" id="jasoseol">Enter the word that you want to count</textarea>
 <span id="count">(0/200)</span>
 <script>
-    let content = document.getElementById('jasoseol').value;
-    document.getElementById('count').innerHTML = '('+ content.length + '/200)';
-    // console.log(content.length)
+    function counter () {
+        let content = document.getElementById('jasoseol').value;
+        document.getElementById('count').innerHTML = '('+ content.length + '/200)';
+    };
+    counter();
 </script>
 </body>
 </html>
